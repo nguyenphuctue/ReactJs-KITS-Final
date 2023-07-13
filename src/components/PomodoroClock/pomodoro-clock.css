@@ -1,0 +1,47 @@
+.pomodoro {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  color: antiquewhite;
+}
+
+.clock {
+  margin: auto;
+  width: 50%;
+}
+
+.clock-content {
+  width: 500px;
+  height: 150px;
+  margin: auto;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+
+.current-time {
+  margin: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.working-time,
+.relax-time {
+  font-size: 20px;
+  text-align: center;
+}
+
+.control {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control Button {
+  margin: 1%;
+  width: 5em;
+  height: 2em;
+  font-size: 200%;
+}

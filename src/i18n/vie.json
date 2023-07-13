@@ -1,0 +1,17 @@
+{
+    "app.title": "React App",
+
+    "header.search.placeholder": "Nhập thông tin",
+
+    "sider.menu.hello-world": "Xin chào thế giới",
+    "sider.menu.chess-board": "Bàn cờ vua",
+    "sider.menu.calculator": "Máy tính",
+    "sider.menu.pomodoro-clock": "Đồng hồ Pomodoro",
+    "sider.menu.quote": "Câu châm ngôn",
+    "sider.menu.todolist": "Danh sách công việc",
+
+    "content.hello-world.title": "Xin chào thế giới",
+    "content.chess-board.title": "Bàn cờ vua",
+    "content.quote.title": "Danh sách câu châm ngôn",
+    "content.todolist.title": "Danh sách công việc"
+}

@@ -1,0 +1,29 @@
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  background-image: url("/img/todolist.jpg");
+  background-size: 100% 100%;
+}
+
+.todo-main {
+  align-items: flex-start;
+}
+
+.todo-tasks,
+.todo-doing,
+.todo-done {
+  background-color: #fff5ee;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 5px 5px #b6b6b4;
+}
+
+.card-main {
+  width: 100%;
+  box-shadow: 3px 3px #b6b6b4;
+}
+.card-content {
+  font-size: large;
+}

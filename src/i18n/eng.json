@@ -1,0 +1,17 @@
+{
+    "app.title": "React App",
+
+    "header.search.placeholder": "Input here",
+
+    "sider.menu.hello-world": "Hello World",
+    "sider.menu.chess-board": "Chess Board",
+    "sider.menu.calculator": "Calculator",
+    "sider.menu.pomodoro-clock": "Pomodoro Clock",
+    "sider.menu.quote": "List Quotes",
+    "sider.menu.todolist": "Todo List",
+    
+    "content.hello-world.title": "Hello World",
+    "content.chess-board.title": "Chess Board",
+    "content.quote.title": "List Quotes",
+    "content.todolist.title": "To do List"
+}

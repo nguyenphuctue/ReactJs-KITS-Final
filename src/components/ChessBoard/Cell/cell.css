@@ -1,0 +1,13 @@
+.black {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    display: inline-block;
+}
+
+.white {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    display: inline-block;
+}

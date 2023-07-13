@@ -1,0 +1,11 @@
+.sider-header {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-name {
+  display: inline;
+  align-items: center;
+}
