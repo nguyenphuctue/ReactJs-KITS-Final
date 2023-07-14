@@ -34,6 +34,12 @@ function ChessBoard({ t }) {
     setColorOdd(temp);
   }
 
+  function handleInput(e) {
+    if (e.key === "," || e.key === ".") {
+      e.preventDefault();
+    }
+  }
+
   return (
     <div className="container-chess-board">
       <Title style={{ textAlign: "center" }}>
@@ -45,6 +51,7 @@ function ChessBoard({ t }) {
             style={{ width: 500 }}
             min={1}
             max={10}
+            onKeyDown={handleInput}
             onChange={getSize}
           />
         </Form.Item>
@@ -61,7 +68,11 @@ function ChessBoard({ t }) {
         </Form.Item>
       </Form>
 
-      <div className="chessBoard" onClick={changeColor} style={{width: 50*value+2+"px"}}>
+      <div
+        className="chessBoard"
+        onClick={changeColor}
+        style={{ width: 50 * value + 2 + "px" }}
+      >
         <Board size={value} colorEven={colorEven} colorOdd={colorOdd} />
       </div>
     </div>

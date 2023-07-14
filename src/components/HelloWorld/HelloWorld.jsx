@@ -2,9 +2,10 @@ import { SearchOutlined } from "@ant-design/icons";
 import { Card, Form, Input, Space, Typography } from "antd";
 const { Title } = Typography;
 import { useState } from "react";
+import { baseUrl } from "../../App";
 
 // eslint-disable-next-line react/prop-types
-function HelloWorld({t}) {
+function HelloWorld({ t }) {
   const [inputValue, setInputValue] = useState("");
 
   function getValue(e) {
@@ -18,7 +19,7 @@ function HelloWorld({t}) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundImage: "url(" + "/img/hello.jpg" + ")",
+        backgroundImage: "url(" + baseUrl + "img/hello.jpg" + ")",
         backgroundSize: "100% 100%",
       }}
     >
@@ -40,7 +41,7 @@ function HelloWorld({t}) {
               placeholder="Input here"
               onChange={getValue}
               style={{
-                borderRadius: "50px"
+                borderRadius: "50px",
               }}
             />
           </Form.Item>
@@ -55,7 +56,7 @@ function HelloWorld({t}) {
               title="Output Value"
               style={{
                 width: "400px",
-                border: "1px solid"
+                border: "1px solid",
               }}
             >
               {inputValue}

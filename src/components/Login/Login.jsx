@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import "./login.css";
 
 const { Title } = Typography;
-
+const baseUrl = import.meta.env.BASE_URL;
 // const default_user = [
 //   {
 //     username: "tuenp",
@@ -50,6 +50,7 @@ function Login() {
   function doLogin() {
     let username = form.getFieldValue("username");
     let password = form.getFieldValue("password");
+
     fetch("http://localhost:3000/authenticate", {
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +65,10 @@ function Login() {
       .then((data) => {
         sessionStorage.setItem("token", data["token"]);
         sessionStorage.setItem("isAuthenticated", "true");
-        history.push("/home");
+        history.push(`${baseUrl}home`);
+      })
+      .catch(() => {
+        alert("Cannot connect to server");
       });
   }
 

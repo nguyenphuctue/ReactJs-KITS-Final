@@ -18,18 +18,21 @@ function Quote({ t }) {
     fetch("http://localhost:3000/quote", {
       headers: {
         "Content-Type": "application/json",
-        "token": sessionStorage.getItem('token')
+        token: sessionStorage.getItem("token"),
       },
     })
       .then((response) => response.json())
-      .then((data) => setListQuotes([data, ...listQuotes]));
+      .then((data) => setListQuotes([data, ...listQuotes]))
+      .catch(() => {
+        alert("Cannot connect to server");
+      });
   }
 
   function getMultiQuote() {
     fetch("http://localhost:3000/quotes", {
       headers: {
         "Content-Type": "application/json",
-        "token": sessionStorage.getItem('token')
+        token: sessionStorage.getItem("token"),
       },
       method: "POST",
       body: JSON.stringify({
@@ -37,7 +40,10 @@ function Quote({ t }) {
       }),
     })
       .then((response) => response.json())
-      .then((data) => setListQuotes([...data, ...listQuotes]));
+      .then((data) => setListQuotes([...data, ...listQuotes]))
+      .catch(() => {
+        alert("Cannot connect to server");
+      });
   }
 
   const itemsPerPage = 4;

@@ -4,6 +4,7 @@ import { SettingOutlined, ReloadOutlined } from "@ant-design/icons";
 const { Title } = Typography;
 
 import "./pomodoro-clock.css";
+import { baseUrl } from "../../App";
 
 const WORKING_TIME = 10;
 const RELAX_TIME = 5;
@@ -21,11 +22,11 @@ function PomodoroClock() {
   const [relaxTimeSet, setRelaxTimeSet] = useState(0);
 
   const styleWorking = {
-    backgroundImage: "url(" + "/img/working.png" + ")",
+    backgroundImage: "url(" + baseUrl + "img/working.png" + ")",
     backgroundSize: "100% 100%",
   };
   const styleRelax = {
-    backgroundImage: "url(" + "/img/relax.jpg" + ")",
+    backgroundImage: "url(" + baseUrl + "img/relax.jpg" + ")",
     backgroundSize: "100% 100%",
   };
 

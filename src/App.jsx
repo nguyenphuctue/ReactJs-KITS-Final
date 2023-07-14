@@ -3,6 +3,7 @@ import Container from "./components/Container/Container";
 import Login from "./components/Login/Login";
 import "./App.css";
 
+export const baseUrl = import.meta.env.BASE_URL;
 
 function App() {
   const history = useHistory();
@@ -13,28 +14,28 @@ function App() {
   }
   let isAuthenticated = sessionStorage.getItem("isAuthenticated");
 
-  if (isAuthenticated === "false" && location.pathname != "/login") {
-    history.push("/login");
+  if (isAuthenticated === "false" && location.pathname != baseUrl + "login") {
+    history.push(baseUrl + "login");
   }
 
-  if (isAuthenticated === "true" && location.pathname == "/") {
-    history.push("/home");
+  if (isAuthenticated === "true") {
+    if (location.pathname == baseUrl || location.pathname == "/") {
+      history.push(baseUrl + "home");
+    }
   }
+  console.log(baseUrl + "home")
 
   return (
     <>
       <Switch>
-        <Route path="/login">
+        <Route path={`${baseUrl}login`}>
           <Login />
         </Route>
         {isAuthenticated ? (
           <>
-            <Route path="/home">
+            <Route path={`${baseUrl}home`}>
               <Container />
             </Route>
-            {/* <Route path="/register">
-                <Container />
-              </Route> */}
           </>
         ) : (
           ""

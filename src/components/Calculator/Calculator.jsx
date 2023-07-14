@@ -4,13 +4,18 @@ import "./calculator.css";
 import Button from "./Button/Button";
 
 let result = "";
-let colorButtons = { "+": "#FFA500", "-": "#FFA500", "*": "#FFA500", "/": "#FFA500" };
+let colorButtons = {
+  "+": "#FFA500",
+  "-": "#FFA500",
+  "*": "#FFA500",
+  "/": "#FFA500",
+};
 function Calculator() {
   const buttons = [
-    { value: "M", onClick: () => clearScreen() , styleColor: "lightgray"},
+    { value: "M", onClick: () => clearScreen(), styleColor: "lightgray" },
     { value: "CE", onClick: () => clearScreen(), styleColor: "lightgray" },
-    { value: "C", onClick: () => clearScreen() ,styleColor: "lightgray"},
-    { value: "\u2190", onClick: () => deleteNumber(), styleColor: "lightgray"},
+    { value: "C", onClick: () => clearScreen(), styleColor: "lightgray" },
+    { value: "\u2190", onClick: () => deleteNumber(), styleColor: "lightgray" },
     { value: 7, onClick: () => addToInput(7) },
     { value: 8, onClick: () => addToInput(8) },
     { value: 9, onClick: () => addToInput(9) },
@@ -25,7 +30,7 @@ function Calculator() {
     { value: "*", onClick: () => multiply(), styleColor: colorButtons["*"] },
     { value: ".", onClick: () => addToInput(".") },
     { value: 0, onClick: () => addToInput(0) },
-    { value: "=", onClick: () => evaluate(), styleColor: "#2B547E"},
+    { value: "=", onClick: () => evaluate(), styleColor: "#2B547E" },
     { value: "\u00F7", onClick: () => divide(), styleColor: colorButtons["/"] },
   ];
   const [contentScreen, setContentScreen] = useState("");
