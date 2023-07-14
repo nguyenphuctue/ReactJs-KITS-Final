@@ -195,7 +195,7 @@ function Container() {
                 style={!darkMode ? { background: colorBgContainer } : {}}
               >
                 <Space>
-                  <Image src={`${baseUrl}react.svg`} />
+                  <Image src={`${baseUrl}/react.svg`} />
                   <Title
                     className="app-name"
                     level={5}
@@ -210,7 +210,7 @@ function Container() {
                 className="sider-header"
                 style={!darkMode ? { background: colorBgContainer } : {}}
               >
-                <Image src={`${baseUrl}react.svg`} />
+                <Image src={`${baseUrl}/react.svg`} />
               </Header>
             )}
 
@@ -255,12 +255,12 @@ function Container() {
 
                 <Avatar
                   size={25}
-                  src={`${baseUrl}img/flag/flag_vietnam.png`}
+                  src={`${baseUrl}/img/flag/flag_vietnam.png`}
                   onClick={changeLocaleToVn}
                 />
                 <Avatar
                   size={25}
-                  src={`${baseUrl}img/flag/flag_usa.png`}
+                  src={`${baseUrl}/img/flag/flag_usa.png`}
                   onClick={changeLocaleToEn}
                 />
 

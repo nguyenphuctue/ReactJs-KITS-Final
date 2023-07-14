@@ -22,11 +22,11 @@ function PomodoroClock() {
   const [relaxTimeSet, setRelaxTimeSet] = useState(0);
 
   const styleWorking = {
-    backgroundImage: "url(" + baseUrl + "img/working.png" + ")",
+    backgroundImage: "url(" + baseUrl + "/img/working.png" + ")",
     backgroundSize: "100% 100%",
   };
   const styleRelax = {
-    backgroundImage: "url(" + baseUrl + "img/relax.jpg" + ")",
+    backgroundImage: "url(" + baseUrl + "/img/relax.jpg" + ")",
     backgroundSize: "100% 100%",
   };
 

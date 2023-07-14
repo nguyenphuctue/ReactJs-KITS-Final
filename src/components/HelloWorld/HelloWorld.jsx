@@ -2,7 +2,7 @@ import { SearchOutlined } from "@ant-design/icons";
 import { Card, Form, Input, Space, Typography } from "antd";
 const { Title } = Typography;
 import { useState } from "react";
-import { baseUrl } from "../../App";
+import "./helloworld.css"
 
 // eslint-disable-next-line react/prop-types
 function HelloWorld({ t }) {
@@ -14,14 +14,7 @@ function HelloWorld({ t }) {
 
   return (
     <div
-      style={{
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundImage: "url(" + baseUrl + "img/hello.jpg" + ")",
-        backgroundSize: "100% 100%",
-      }}
+      className="hello-main"
     >
       <div>
         <Title style={{ textAlign: "center", color: "#29465B" }}>
